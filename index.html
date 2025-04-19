@@ -1,1 +1,276 @@
-<h1>PFO N1 Seminario de Actualización dev ops</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo Practico DevOps</title>
+    <style>
+        body{
+            max-height: 100vh;
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .container-main-title{
+            position: absolute;
+            top: 10;
+            left: 10;
+            padding-left: 40px;
+            padding-top: 30px;
+        }
+        .main-title{
+            display: flex; 
+            flex-direction: row; 
+            gap: 20px;
+            
+        }
+        .main-title p{
+            font-weight: 800;
+            font-family: serif;
+            color: #352408;
+        }
+        .main-title img{
+            background-color: #f1dcb6;
+            border: 1px solid;
+        }
+        .totoro-img{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+        .container-main {
+            display: flex;
+            align-items: center;
+            margin: 0;
+            padding: 0;            
+            height: 100vh;
+            width: 100%;
+            max-height: 100vw;
+            max-width: 100%;
+            flex-direction: row;
+            justify-content: center;
+            background-color: #ddc8a4;
+            color: #5b3f0d;
+            font-family: Serif;
+            font-weight: 700;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .container-login {
+            margin: 0;
+            padding: 0; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-width: 50%;
+            width: 100%;
+            max-width: 400px;
+            background-color: #e1ccaa;
+            padding: 20px;
+
+        }
+        .container-login-b{
+            width: 50%;
+            height: 100vh;
+            padding: 0;
+            margin: 0;
+        }
+        .title{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 15px;
+        }
+        h1{
+            padding: 0;
+            margin: 0;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 350px;
+            gap: 10px;
+        }
+        .label-password{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        label {
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #5b3f0d;
+            font-weight: 700;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            outline: none;
+        }
+
+        input {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 2px solid #5b3e0d67;
+            border-radius: 10px;
+            font-size: 14px;
+            color: #3e3e3e;
+            background-color: #f3dcb4;
+            transition: box-shadow 0.3s ease, border-color 0.3s ease;
+            outline: none;
+        }
+        input:focus{
+            outline: none;
+            border-color: #5b3f0d;
+            box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.2);
+        }
+        a{
+            color: #5b3f0d;
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #979955;
+            color: #ffffff;
+            border: 2px solid #707241;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #6b6b3f; 
+        }
+        .separator {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 350px;
+            margin: 20px 0;
+            color: #5b3f0d;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            }
+
+            .separator .line {
+            flex: 1;
+            height: 2px;
+            background-color: #5b3e0d71;
+            border: none;
+            }
+            #button-github{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                width: 350px;
+                background-color: #ddc8a4;
+                color: #5b3f0d;
+            }
+            #button-github:hover{
+                background-color: #ad9d82;
+            }
+    </style>
+</head>
+<body>
+    <footer class="container-main-title">
+        <div class="main-title">
+            <img 
+                class="totoro-img" 
+                loading="lazy"
+                src="img/Totoro-imagen.png"
+                alt="imagen de totoro">
+            <p>PFO N°1 - Seminario de Actualización DevOps</p>
+        </div>
+    </footer>
+    <main class="container-main">
+
+        <section class="container-login">
+            <div class="title">
+                <h1>Login to your account</h1>
+                <p>Enter your username below to login to your account</p>
+            </div>  
+            <form action="submit" id="loginForm">
+                <label for="username">Username</label>
+                <input id="username" name="username" type="text">
+                <div class="label-password">
+                    <label for="password">Password</label>
+                    <a href="">Forgot your password?</a>
+                </div>
+                <input id="password" name="password" type="password">
+                <button type="submit">Login</button>
+            </form>
+            <div class="separator">
+                <hr class="line"><span>Or continue with</span><hr class="line">
+            </div>
+            <button id="button-github">
+                <svg 
+                    height="18" 
+                    viewBox="0 0 16 16" 
+                    width="18" 
+                    aria-hidden="true" 
+                    fill="currentColor">
+                <path d="M8 0C3.58 0 0 3.58 0 8a8.001 8.001 0 005.47 7.59c.4.07.55-.17.55-.38v-1.33c-2.23.49-2.7-1.07-2.7-1.07-.36-.92-.88-1.17-.88-1.17-.72-.49.05-.48.05-.48.8.06 1.22.83 1.22.83.71 1.22 1.86.87 2.31.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.13 0 0 .67-.21 2.2.82a7.56 7.56 0 012-.27 7.56 7.56 0 012 .27c1.53-1.03 2.2-.82 2.2-.82.44 1.11.16 1.93.08 2.13.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8.001 8.001 0 0016 8c0-4.42-3.58-8-8-8z"/>
+              </svg> 
+              <span>Login with GitHub</span>
+            </button>
+            <div  class="separator">
+                <p>Don't have an account? <a style="text-decoration: underline;" href="">Sign up</a></p>
+            </div>
+        </section>
+        
+        <section class="container-login-b">
+            <img 
+                src="https://wallpapers.com/images/hd/studio-ghibli-scenery-house-with-garden-e3ts4mhf3gpwevgf.jpg" 
+                alt="Imagen de un paisaje del viaje de chihiro" 
+                loadig="lazy" 
+                style=" width: 100%; height: 100vh; background-position: center; background-size: cover;">
+        </section>
+    </main>
+    <script>
+        const form = document.getElementById('loginForm');
+      
+        form.addEventListener('submit', async function (e) {
+          e.preventDefault();
+      
+          const username = document.getElementById('username').value;
+          const password = document.getElementById('password').value;
+      
+          try {
+            const response = await fetch('procesar_login.php', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({ username, password })
+            });
+      
+            const result = await response.json();
+            console.log(result);
+      
+            if (result.status === 'ok') {
+              alert('Login correcto');
+            } else {
+              alert('Error en login: ' + result.message);
+            }
+      
+          } catch (err) {
+            console.error('Error:', err);
+            alert('Hubo un error de red');
+          }
+        });
+    </script>
+    
+</body>
+</html>
